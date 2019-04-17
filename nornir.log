@@ -1,0 +1,197 @@
+2019-04-17 15:00:11,913 -     werkzeug -     INFO -       _log() -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-04-17 15:00:11,914 -     werkzeug -     INFO -       _log() -  * Restarting with stat
+2019-04-17 15:00:13,011 -     werkzeug -  WARNING -       _log() -  * Debugger is active!
+2019-04-17 15:00:13,012 -     werkzeug -     INFO -       _log() -  * Debugger PIN: 901-482-608
+2019-04-17 15:00:22,754 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:00:22] "GET / HTTP/1.1" 200 -
+2019-04-17 15:00:35,162 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 15:00:35,162 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 15:00:35,162 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['intefaces']}
+2019-04-17 15:00:35,162 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['intefaces']}
+2019-04-17 15:00:35,191 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 15:00:35,191 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 15:00:42,858 - nornir.core.task -    ERROR -      start() - xrv7: Traceback (most recent call last):
+  File "/home/marcin/.local/lib/python3.6/site-packages/nornir/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/home/marcin/.local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 60, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSXRDriver' object has no attribute 'get_intefaces'
+
+2019-04-17 15:00:42,858 - nornir.core.task -    ERROR -      start() - xrv7: Traceback (most recent call last):
+  File "/home/marcin/.local/lib/python3.6/site-packages/nornir/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/home/marcin/.local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 60, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSXRDriver' object has no attribute 'get_intefaces'
+
+2019-04-17 15:00:42,953 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:00:42] "POST / HTTP/1.1" 500 -
+2019-04-17 15:00:43,010 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:00:43] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2019-04-17 15:00:43,016 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:00:43] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+2019-04-17 15:00:43,017 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:00:43] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2019-04-17 15:00:43,232 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:00:43] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2019-04-17 15:00:43,313 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:00:43] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2019-04-17 15:00:43,582 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:00:43] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2019-04-17 15:03:36,009 -     werkzeug -     INFO -       _log() -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-04-17 15:03:36,011 -     werkzeug -     INFO -       _log() -  * Restarting with stat
+2019-04-17 15:03:37,133 -     werkzeug -  WARNING -       _log() -  * Debugger is active!
+2019-04-17 15:03:37,133 -     werkzeug -     INFO -       _log() -  * Debugger PIN: 901-482-608
+2019-04-17 15:03:39,411 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:03:39] "GET / HTTP/1.1" 200 -
+2019-04-17 15:03:52,609 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 15:03:52,609 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 15:03:52,610 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['intefaces']}
+2019-04-17 15:03:52,610 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['intefaces']}
+2019-04-17 15:03:52,645 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 15:03:52,645 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 15:04:00,535 - nornir.core.task -    ERROR -      start() - xrv7: Traceback (most recent call last):
+  File "/home/marcin/.local/lib/python3.6/site-packages/nornir/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/home/marcin/.local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 60, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSXRDriver' object has no attribute 'get_intefaces'
+
+2019-04-17 15:04:00,535 - nornir.core.task -    ERROR -      start() - xrv7: Traceback (most recent call last):
+  File "/home/marcin/.local/lib/python3.6/site-packages/nornir/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/home/marcin/.local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 60, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSXRDriver' object has no attribute 'get_intefaces'
+
+2019-04-17 15:04:00,615 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:04:00] "POST / HTTP/1.1" 500 -
+2019-04-17 15:04:00,660 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:04:00] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2019-04-17 15:04:00,671 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:04:00] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+2019-04-17 15:04:00,717 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:04:00] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2019-04-17 15:04:00,970 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:04:00] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2019-04-17 15:04:00,987 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:04:00] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2019-04-17 15:04:01,267 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:04:01] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2019-04-17 15:07:01,991 -     werkzeug -     INFO -       _log() -  * Detected change in '/home/marcin/nornir-projects/web-netdiag-tool/main.py', reloading
+2019-04-17 15:07:02,132 -     werkzeug -     INFO -       _log() -  * Restarting with stat
+2019-04-17 15:07:03,191 -     werkzeug -  WARNING -       _log() -  * Debugger is active!
+2019-04-17 15:07:03,191 -     werkzeug -     INFO -       _log() -  * Debugger PIN: 901-482-608
+2019-04-17 15:07:19,853 -     werkzeug -     INFO -       _log() -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-04-17 15:07:19,854 -     werkzeug -     INFO -       _log() -  * Restarting with stat
+2019-04-17 15:07:20,719 -     werkzeug -  WARNING -       _log() -  * Debugger is active!
+2019-04-17 15:07:20,719 -     werkzeug -     INFO -       _log() -  * Debugger PIN: 901-482-608
+2019-04-17 15:07:24,337 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:07:24] "GET / HTTP/1.1" 200 -
+2019-04-17 15:07:28,376 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 15:07:28,376 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 15:07:28,377 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['intefaces']}
+2019-04-17 15:07:28,377 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['intefaces']}
+2019-04-17 15:07:28,412 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 15:07:28,412 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 15:07:38,117 - nornir.core.task -    ERROR -      start() - xrv7: Traceback (most recent call last):
+  File "/home/marcin/.local/lib/python3.6/site-packages/nornir/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/home/marcin/.local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 60, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSXRDriver' object has no attribute 'get_intefaces'
+
+2019-04-17 15:07:38,117 - nornir.core.task -    ERROR -      start() - xrv7: Traceback (most recent call last):
+  File "/home/marcin/.local/lib/python3.6/site-packages/nornir/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/home/marcin/.local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 60, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSXRDriver' object has no attribute 'get_intefaces'
+
+2019-04-17 15:07:38,215 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:07:38] "POST / HTTP/1.1" 500 -
+2019-04-17 15:07:38,259 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:07:38] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2019-04-17 15:07:38,263 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:07:38] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+2019-04-17 15:07:38,265 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:07:38] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2019-04-17 15:07:38,417 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:07:38] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2019-04-17 15:07:38,489 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:07:38] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2019-04-17 15:07:39,002 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:07:39] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2019-04-17 15:09:35,988 -     werkzeug -     INFO -       _log() -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-04-17 15:09:35,989 -     werkzeug -     INFO -       _log() -  * Restarting with stat
+2019-04-17 15:09:37,121 -     werkzeug -  WARNING -       _log() -  * Debugger is active!
+2019-04-17 15:09:37,122 -     werkzeug -     INFO -       _log() -  * Debugger PIN: 901-482-608
+2019-04-17 15:09:38,350 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:09:38] "GET / HTTP/1.1" 200 -
+2019-04-17 15:09:42,301 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 15:09:42,301 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 15:09:42,301 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 15:09:42,301 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 15:09:42,338 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 15:09:42,338 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 15:09:50,607 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:09:50] "POST / HTTP/1.1" 500 -
+2019-04-17 15:09:50,678 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:09:50] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2019-04-17 15:09:50,686 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:09:50] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+2019-04-17 15:09:50,688 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:09:50] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2019-04-17 15:09:50,838 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:09:50] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2019-04-17 15:09:50,906 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:09:50] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2019-04-17 15:09:51,382 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:09:51] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2019-04-17 15:10:03,541 -     werkzeug -     INFO -       _log() -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-04-17 15:10:03,541 -     werkzeug -     INFO -       _log() -  * Restarting with stat
+2019-04-17 15:10:04,151 -     werkzeug -  WARNING -       _log() -  * Debugger is active!
+2019-04-17 15:10:04,151 -     werkzeug -     INFO -       _log() -  * Debugger PIN: 901-482-608
+2019-04-17 15:10:05,896 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:10:05] "GET / HTTP/1.1" 200 -
+2019-04-17 15:10:09,545 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 15:10:09,545 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 15:10:09,546 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 15:10:09,546 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 15:10:09,567 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 15:10:09,567 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 15:10:17,716 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 15:10:17] "POST / HTTP/1.1" 200 -
+2019-04-17 16:15:04,070 -     werkzeug -     INFO -       _log() -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-04-17 16:15:04,071 -     werkzeug -     INFO -       _log() -  * Restarting with stat
+2019-04-17 16:15:04,699 -     werkzeug -  WARNING -       _log() -  * Debugger is active!
+2019-04-17 16:15:04,700 -     werkzeug -     INFO -       _log() -  * Debugger PIN: 901-482-608
+2019-04-17 16:15:10,063 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 16:15:10] "GET / HTTP/1.1" 200 -
+2019-04-17 16:15:13,298 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 16:15:13,298 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 16:15:13,298 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 16:15:13,298 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 16:15:13,324 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 16:15:13,324 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 16:15:21,974 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 16:15:21] "POST / HTTP/1.1" 200 -
+2019-04-17 16:20:08,414 -     werkzeug -     INFO -       _log() -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-04-17 16:20:08,416 -     werkzeug -     INFO -       _log() -  * Restarting with stat
+2019-04-17 16:20:09,388 -     werkzeug -  WARNING -       _log() -  * Debugger is active!
+2019-04-17 16:20:09,389 -     werkzeug -     INFO -       _log() -  * Debugger PIN: 901-482-608
+2019-04-17 16:20:13,609 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 16:20:13] "GET / HTTP/1.1" 200 -
+2019-04-17 16:20:17,399 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 16:20:17,399 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 16:20:17,400 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 16:20:17,400 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 16:20:17,431 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 16:20:17,431 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 16:20:26,182 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 16:20:26] "POST / HTTP/1.1" 200 -
+2019-04-17 16:28:07,200 -     werkzeug -     INFO -       _log() -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-04-17 16:28:07,202 -     werkzeug -     INFO -       _log() -  * Restarting with stat
+2019-04-17 16:28:08,223 -     werkzeug -  WARNING -       _log() -  * Debugger is active!
+2019-04-17 16:28:08,223 -     werkzeug -     INFO -       _log() -  * Debugger PIN: 901-482-608
+2019-04-17 16:28:10,394 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 16:28:10] "GET / HTTP/1.1" 200 -
+2019-04-17 16:28:18,342 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 16:28:18,342 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 16:28:18,342 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 16:28:18,342 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 16:28:18,380 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 16:28:18,380 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 16:28:27,242 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 16:28:27] "POST / HTTP/1.1" 200 -
+2019-04-17 16:30:09,393 -     werkzeug -     INFO -       _log() -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-04-17 16:30:09,394 -     werkzeug -     INFO -       _log() -  * Restarting with stat
+2019-04-17 16:30:10,113 -     werkzeug -  WARNING -       _log() -  * Debugger is active!
+2019-04-17 16:30:10,113 -     werkzeug -     INFO -       _log() -  * Debugger PIN: 901-482-608
+2019-04-17 16:30:14,435 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 16:30:14] "GET / HTTP/1.1" 200 -
+2019-04-17 16:30:17,908 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 16:30:17,908 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 16:30:17,908 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 16:30:17,908 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 16:30:17,928 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 16:30:17,928 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 16:30:27,988 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 16:30:27] "POST / HTTP/1.1" 200 -
+2019-04-17 16:35:18,450 -     werkzeug -     INFO -       _log() -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-04-17 16:35:18,452 -     werkzeug -     INFO -       _log() -  * Restarting with stat
+2019-04-17 16:35:19,406 -     werkzeug -  WARNING -       _log() -  * Debugger is active!
+2019-04-17 16:35:19,407 -     werkzeug -     INFO -       _log() -  * Debugger PIN: 901-482-608
+2019-04-17 16:35:21,947 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 16:35:21] "GET / HTTP/1.1" 200 -
+2019-04-17 16:35:25,214 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 16:35:25,214 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 16:35:25,214 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 16:35:25,214 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 16:35:25,237 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 16:35:25,237 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 16:35:33,697 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 16:35:33] "POST / HTTP/1.1" 200 -
+2019-04-17 16:36:28,874 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 16:36:28,874 -  nornir.core -     INFO -        run() - Running task 'Get interfaces' with num_workers: 100
+2019-04-17 16:36:28,874 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 16:36:28,874 -  nornir.core -    DEBUG -        run() - {'name': 'Get interfaces', 'getters': ['interfaces']}
+2019-04-17 16:36:28,892 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 16:36:28,892 - nornir.core.task -     INFO -      start() - xrv7: Get interfaces: running task
+2019-04-17 16:36:29,710 -     werkzeug -     INFO -       _log() - 192.168.194.226 - - [17/Apr/2019 16:36:29] "POST / HTTP/1.1" 200 -

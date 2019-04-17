@@ -46,18 +46,39 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '443436456542'
 Bootstrap(app)
 
+# This method should return a dictionary with results
+# { 'ip_address': "1.2.3.4/24",
+#   'if_status': "up",
+#
+#
+
+def initDiag(router, interface):
+
+  nr1 = nr.filter(hostname=router)
+# Fetch interfaces 
+  ifaces = nr1.run(name="Get interfaces", task=napalm_get, getters=["interfaces"])
+  myiface = ifaces[router][0].result['interfaces'][interface]
+  return myiface
+
+
 @app.route("/", methods=["GET", "POST"])
 
 def index():
     form = initForm()
     if form.validate_on_submit():
+        
+	# Get all params
         router = request.form.get("router")
         interface = request.form.get("interface")
-        nr1 = nr.filter(hostname=router)
-        cmd = "show interface " + interface
-        res = nr1.run(name="Run CLI command", task=netmiko_send_command, command_string=cmd)
-        res1 = res[router][0]
-        return render_template("home.html", form=form, result=res1)
+        
+	# Initiate checks
+        result = initDiag(router, interface)
+#        nr1 = nr.filter(hostname=router)
+#        cmd = "show interface " + interface
+#        res = nr1.run(name="Run CLI command", task=netmiko_send_command, command_string=cmd)
+#        res1 = res[router][0]
+#        res2 = nr1. run(napalm_get, get_interfaces(interface))
+        return render_template("home.html", form=form, result=result)
     else:
         return render_template("home.html", form=form)
 
