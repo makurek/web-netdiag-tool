@@ -1,0 +1,37 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+<title>Web NETDIAG tool</title>
+{% endblock %}
+
+{% block content %}
+      
+        <style>
+        .li { 
+           width: 10%;
+        {
+        </style>
+	<div class="container">
+           <p class="h2">Welcome to web NETDIAG tool</p>
+	   <form method="POST" class="form-inline" action="/">
+             <div class="form-group">
+	        {{ form.csrf_token }}
+                {{ wtf.form_field(form.router) }}
+		{{ wtf.form_field(form.interface) }}
+	     </div>
+	     <button type="submit" class="btn btn-primary btn-sm">Launch diagnostics</button>
+	   </form>
+       	   <div width="10%">
+           {% if result %}
+	      <pre>
+              {{ result | safe }}
+	      </pre>
+           {% endif %}
+           </div>
+	</div>	
+{% endblock %}
+{% block scripts %}
+   {{ super() }}
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+{% endblock %}

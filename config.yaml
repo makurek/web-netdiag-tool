@@ -1,0 +1,4 @@
+---
+core:
+  num_workers: 100
+
