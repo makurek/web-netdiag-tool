@@ -55,10 +55,15 @@ Bootstrap(app)
 def initDiag(router, interface):
 
   nr1 = nr.filter(hostname=router)
-# Fetch interfaces 
-  ifaces = nr1.run(name="Get interfaces", task=napalm_get, getters=["interfaces"])
-  myiface = ifaces[router][0].result['interfaces'][interface]
-  return myiface
+# Get basic facts
+  basic_facts = nr1.run(name="Get interfaces", task=napalm_get, getters=["interfaces", "interfaces_ip"])
+  phy_iface = basic_facts[router][0].result['interfaces'][interface]
+  # this is bad approach, because interface might be nonexistent
+  ip_iface = basic_facts[router][0].result['interfaces_ip'][interface]
+  d = {}
+  d['phy_iface'] = phy_iface
+  d['ip_iface'] = ip_iface
+  return d
 
 
 @app.route("/", methods=["GET", "POST"])

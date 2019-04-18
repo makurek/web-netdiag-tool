@@ -35,20 +35,26 @@
              <tbody>
               <tr>
 		<td>Admin enabled</td>
-                <td>{{ result['is_enabled'] }}</td>
+                <td>{{ result['phy_iface']['is_enabled'] }}</td>
               </tr>
               <tr>
                 <td>Is up?</td>
-                <td>{{ result['is_up'] }}</td>
+                <td>{{ result['phy_iface']['is_up'] }}</td>
               </tr>
               <tr>
                 <td>Description</td>
-                <td>{{ result['description'] }}</td>
+                <td>{{ result['phy_iface']['description'] }}</td>
               </tr>
               <tr> 
                 <td>Speed</td>
-                <td>{{ result['speed'] }}</td>
+                <td>{{ result['phy_iface']['speed'] }}</td>
               </tr>
+             {% for k, v in result['ip_iface']['ipv4'].items() %}
+		<tr>
+                   <td>IPv4 address</td>
+                   <td>{{ k }}/{{ v['prefix_length'] }}</td>
+                </tr>
+	     {% endfor %}
               </tbody>
               </table>
               </div>
