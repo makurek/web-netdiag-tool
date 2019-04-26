@@ -14,4 +14,9 @@ xrv8:
    platform: iosxr
    username: cisco
    password: cisco
+vmx1:
+   hostname: vmx1
+   platform: junos
+   username: juniper
+   password: Juniper
 

@@ -1,5 +1,6 @@
 import os
 import re
+import ipaddress
 from flask import Flask
 from flask_wtf import FlaskForm
 from flask import render_template
@@ -46,6 +47,27 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '443436456542'
 Bootstrap(app)
 
+# Ping a list of neighbors
+# This method should return a following dictionary
+# { 'neighbor_ip_1' : True,
+#   'neighbor_ip_2' : False }
+# Typically we will ping only one neighbor
+
+def pingNeighbor(nr1, router, ips):
+   result = {}
+   for ip in ips:
+      cmd = "ping " + str(ip + 1) 
+      nr_result = nr1.run(name = "Ping IPv4 neighbor", task=netmiko_send_command, command_string=cmd)
+      output = str(nr_result[router][0]).split("\n")[4]
+      print(output)
+      if "!" in output:
+         result[str(ip + 1)] = "True"
+      else:
+         result[str(ip + 1)] = "False"
+   print(result) 
+   return result
+   
+
 # This method should return a dictionary with results
 # { 'ip_address': "1.2.3.4/24",
 #   'if_status': "up",
@@ -53,16 +75,24 @@ Bootstrap(app)
 #
 
 def initDiag(router, interface):
-
+  
+  # Filter to run commands on single router only
   nr1 = nr.filter(hostname=router)
-# Get basic facts
+  
+  # Get basic facts
+  # TODO: error handling
   basic_facts = nr1.run(name="Get interfaces", task=napalm_get, getters=["interfaces", "interfaces_ip"])
   phy_iface = basic_facts[router][0].result['interfaces'][interface]
-  # this is bad approach, because interface might be nonexistent
+  # TODO: this is bad approach, because interface might be nonexistent
   ip_iface = basic_facts[router][0].result['interfaces_ip'][interface]
+  ips = []
+  # Iterate through IPv4 addresses
+  for k, v in ip_iface['ipv4'].items():
+     ips.append(ipaddress.ip_address(k))
   d = {}
   d['phy_iface'] = phy_iface
   d['ip_iface'] = ip_iface
+  d['ping_neighbor'] = pingNeighbor(nr1, router, ips)
   return d
 
 
@@ -72,17 +102,12 @@ def index():
     form = initForm()
     if form.validate_on_submit():
         
-	# Get all params
+	# Get all params 
         router = request.form.get("router")
         interface = request.form.get("interface")
         
-	# Initiate checks
+	# Initiate checks using data passed to web form
         result = initDiag(router, interface)
-#        nr1 = nr.filter(hostname=router)
-#        cmd = "show interface " + interface
-#        res = nr1.run(name="Run CLI command", task=netmiko_send_command, command_string=cmd)
-#        res1 = res[router][0]
-#        res2 = nr1. run(napalm_get, get_interfaces(interface))
         return render_template("home.html", form=form, result=result)
     else:
         return render_template("home.html", form=form)

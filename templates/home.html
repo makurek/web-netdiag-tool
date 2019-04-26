@@ -55,6 +55,13 @@
                    <td>{{ k }}/{{ v['prefix_length'] }}</td>
                 </tr>
 	     {% endfor %}
+             
+             {% for k, v in result['ping_neighbor'].items() %}
+                <tr>
+                   <td>Peer IP {{ k }} pingable?</td>
+                   <td>{{ v }}</td>
+                </tr>
+             {% endfor %}
               </tbody>
               </table>
               </div>
